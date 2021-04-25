@@ -9,6 +9,24 @@
 			"lessonsLeft": "2",
 			"dateStart": "2021-04-01",
 			"dateEnd": "2021-04-28"
+		},
+		{
+			"firstName": "Johnas",
+			"secondName": "Frei",
+			"aboType": "online",
+			"lessonsTotal": "4",
+			"lessonsLeft": "1",
+			"dateStart": "2021-04-01",
+			"dateEnd": "2021-04-28"
+		},
+		{
+			"firstName": "Simon",
+			"secondName": "Brühviller",
+			"aboType": "in studio",
+			"lessonsTotal": "10",
+			"lessonsLeft": "3",
+			"dateStart": "2021-03-01",
+			"dateEnd": "2021-05-16"
 		}
 	]
 }
