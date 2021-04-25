@@ -4,9 +4,20 @@ fetch('http://yogakriens.ch/abo/students.json')
   	
   	let studentsArr = data.students;
   	let str = "";
-  	let div = document.querySelector('#studentsList');
+  	let studentsTable = document.querySelector('#studentsTable');
   	studentsArr.forEach( (el,i) => {
-  		//div.innerHTML = el.firstName;
+  		str += 
+  		`<tr>
+  			<td>${i+1}</td>
+  			<td>${el.firstName}</td>
+  			<td>${el.secondName}</td>
+  			<td>${el.aboType}</td>
+  			<td>${el.lessonsTotal}</td>
+  			<td>${el.lessonsLeft}</td>
+  			<td>${el.dateStart}</td>
+  			<td>${el.dateEnd}</td>
+  		</tr>`;
   	});
+  		studentsTable.innerHTML = str;
   });
   
