@@ -1,0 +1,9 @@
+.hide {
+	display:none;
+}
+.active {
+	display: table-row;
+}
+.filter {
+	cursor: pointer;
+}

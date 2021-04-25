@@ -1,9 +1,10 @@
+let studentsTable = document.querySelector('#studentsTable');
+
 fetch('http://yogakriens.ch/abo/students.json')
   .then(response => response.json())
   .then(data => {
   	let studentsArr = data.students;
   	let str = "";
-  	let studentsTable = document.querySelector('#studentsTable');
   	let aboStatus = "",
   		needNew = "uk-alert-danger",
   		almostFinished = "uk-alert-warning",
@@ -33,5 +34,28 @@ fetch('http://yogakriens.ch/abo/students.json')
   		</tr>`;
   	});
   		studentsTable.innerHTML = str;
+  		let rows = document.querySelectorAll('#studentsTable tr');
+  		const abosFilter = document.querySelectorAll('.filter');
+ 
+  		abosFilter.forEach(el => {
+		  	el.addEventListener('click', function(e){
+		  		let currentStatus = this.dataset.status;
+		  		rows.forEach(row => {
+		  			row.classList.remove('active','hide');
+		  			if( currentStatus == "reset" ){
+		  				row.classList.remove('active','hide');
+		  			}
+		  			else if( row.classList.contains(currentStatus) ){
+		  				row.classList.add('active');
+		  			}
+		  			else{
+		  				row.classList.add('hide');
+		  			}
+		  		});
+		  	});
+		}); 
   });
+
+
+  
   

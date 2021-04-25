@@ -5,10 +5,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="assets/uikit/css/uikit.min.css" />
+        <link rel="stylesheet" href="style.css" />
         <!--<script src="js/uikit.min.js"></script>
         <script src="js/uikit-icons.min.js"></script>
     -->
-    	<script src="app.js"></script>
+    	
     </head>
     <body>
     	<div class="uk-container">
@@ -32,10 +33,12 @@
 			        <tr>
 			            <td colspan="8">
 			            	<ul class="uk-list">
-			            		<li><span class="uk-label uk-label-danger">danger</span> - one lesson left</li>
-			            		<li><span class="uk-label uk-label-warning">warning</span> - two lessons left</li>
- 								<li><span class="uk-label uk-label-success">good</span> - three and more lessons left</li>
+			            		<li><span class="uk-label uk-label-danger filter" data-status="uk-alert-danger">danger</span> - one lesson left</li>
+			            		<li><span class="uk-label uk-label-warning filter" data-status="uk-alert-warning">warning</span> - two lessons left</li>
+ 								<li><span class="uk-label uk-label-success filter" data-status="uk-alert-success">good</span> - three and more lessons left</li>
+ 								<li><span class="uk-icon uk-close filter" data-status="reset">X - reset filter</span></li>
  							</ul>
+ 							
 			            </td>
 			        </tr>
 			    </tfoot>
@@ -45,5 +48,6 @@
 			</table>
     		</div>
     	</div>
+    	<script src="app.js"></script>
     </body>
 </html>
