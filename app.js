@@ -1,7 +1,6 @@
 fetch('http://yogakriens.ch/abo/students.json')
   .then(response => response.json())
   .then(data => {
-  	
   	let studentsArr = data.students;
   	let str = "";
   	let studentsTable = document.querySelector('#studentsTable');
