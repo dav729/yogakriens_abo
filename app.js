@@ -6,7 +6,7 @@ fetch('http://yogakriens.ch/abo/students.json')
   	let str = "";
   	let div = document.querySelector('#studentsList');
   	studentsArr.forEach( (el,i) => {
-  		div.innerHTML = el.firstName;
+  		//div.innerHTML = el.firstName;
   	});
   });
   
